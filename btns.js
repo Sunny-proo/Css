@@ -1,4 +1,4 @@
-let wonsound=new Audio("mixkit-cheering-crowd-loud-whistle-610.wav");
+let wonsound=new Audio("won.txt");
   let audioturn=new Audio("click.txt")
 let allbtns=document.querySelectorAll(".inner");
 let turn="X";
