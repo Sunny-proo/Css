@@ -1,5 +1,5 @@
 let wonsound=new Audio("mixkit-cheering-crowd-loud-whistle-610.wav");
-  let audioturn=new Audio("click")
+  let audioturn=new Audio("click.mp3")
 let allbtns=document.querySelectorAll(".inner");
 let turn="X";
 function changeturn(){
