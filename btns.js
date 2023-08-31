@@ -48,6 +48,7 @@ function btnpress(){
 let rest=document.querySelector("#reset");
 rest.addEventListener("click", reset);
 function reset(){
+  turn="X";
   let line=document.querySelector(".line");
 try{
   if(clss!==""){
@@ -83,7 +84,6 @@ function computer(){
 
   let sc=document.querySelector(a);
   sc.innerText="X"
-  changeturn();
   for(buttn of allbtns){
     buttn.addEventListener("click",btn2press);
   }
@@ -95,12 +95,11 @@ function btn2press(){
   let dr=btn.getAttribute("id");
   a=`#${dr}`;
   let sc=document.querySelector(a);
-  sc.innerText=turn;
+  sc.innerText="0";
   let idx=arr.indexOf(dr);
   let b=arr.splice(idx,1);
   let len=arr.lentgh-1;
   setTimeout(computer, 1000);
-  changeturn();
 
 }
 function checkwin(){
