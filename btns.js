@@ -331,7 +331,6 @@ function check2win(){
 function win(){
 try{
   check2win();
-  setTimeout(reset, 10000)
 }
 catch{
   if(turn=="0" && cat==1){
