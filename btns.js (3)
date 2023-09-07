@@ -1,7 +1,7 @@
  let wonsound=new Audio("won.txt");
   let audioturn=new Audio("click.txt")
 let allbtns=document.querySelectorAll(".inner");
-let lossound=new Audio("loss");
+let lossound=new Audio("loss.txt");
 let turn="X";
 function changeturn(){
   if(turn=="X"){
