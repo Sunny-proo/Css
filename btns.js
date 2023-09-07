@@ -32,14 +32,12 @@ function start(){
 let twobtn=document.querySelectorAll(".inn");
 for(btn2 of twobtn){
   btn2.addEventListener("click", start);
-  btn2.disabled=true;
 }
 
 
 function btnpress(){
   audioturn.play();
   let btn=this;
-  btn.disabled=true;
   let dr=btn.getAttribute("id");
   a=`#${dr}`;
   let sc=document.querySelector(a);
@@ -51,10 +49,6 @@ function btnpress(){
 let rest=document.querySelector("#reset");
 rest.addEventListener("click", reset);
 function reset(){
-  for(btn of allbtns){
-    btn.disabled=false;}
- for(bnt of twobtn){
-   bnt.disabled=false;}
   turn="X";
   let line=document.querySelector(".line");
 try{
