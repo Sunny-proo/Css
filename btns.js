@@ -46,8 +46,7 @@ function btnpress(){
   checkwin();
 
 }
-let rest=document.querySelector("#reset");
-rest.addEventListener("click", reset);
+
 function reset(){
   let line=document.querySelector(".line");
 try{
@@ -78,6 +77,7 @@ function start2(){
 }
 let arr=["btn1","btn2","btn3","btn4","btn5","btn6","btn7","btn8","btn9"];
 function computer(){
+ audioturn.play();
   let len=arr.length-1;
   let idx=Math.floor(Math.random()*len);
   a=`#${arr[idx]}`;
@@ -230,6 +230,7 @@ function check2win(){
     }
   if(btn1.innerText=="X"){
     lossound.play();
+   line.classList.add("l2");
     clss="l2"
   }
    
@@ -244,6 +245,7 @@ function check2win(){
     }
   if(btn1.innerText=="X"){
     lossound.play();
+   line.classList.add("l3");
     clss="l3"
   }
     
@@ -258,6 +260,7 @@ function check2win(){
     }
   if(btn2.innerText=="X"){
     lossound.play();
+   line.classList.add("l4);
     clss="l4"
   }
     
@@ -273,6 +276,7 @@ function check2win(){
     }
   if(btn3.innerText=="X"){
     lossound.play()
+   line.classList.add("l5");
     clss="l5"
   }
     
@@ -287,6 +291,7 @@ function check2win(){
     }
   if(btn4.inner=="X"){
     lossound.play();
+   line.classList.add("l6");
     clss="l6"
   }
     
@@ -301,6 +306,7 @@ function check2win(){
     }
   if(btn3.innerText=="X"){
     lossound.play()
+   line.classList.add("l7");
     clss="l7"
   }
    
@@ -315,6 +321,7 @@ function check2win(){
     }
   if(btn7.innerText=="X"){
     lossound.play();
+   line.classList.add("l8");
     clss="l8"
   }
  
