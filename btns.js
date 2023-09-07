@@ -260,7 +260,7 @@ function check2win(){
     }
   if(btn2.innerText=="X"){
     lossound.play();
-   line.classList.add("l4);
+   line.classList.add("l4");
     clss="l4"
   }
     
