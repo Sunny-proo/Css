@@ -47,34 +47,9 @@ function btnpress(){
 
 }
 
-function reset(){
-  let line=document.querySelector(".line");
-try{
-  if(clss!==""){
-  line.removeAttribute("class", clss);
-  
-}
-}
-catch(err){
-  console.log(err)
-}
-  img.removeAttribute("class", "pro");
-  for(btn of allbtns){
-    btn.innerText="";
-  }
-  return ids="";
-  return turn="X";
-  ids="";
-  start2()
-  return arr=["btn1","btn2","btn3","btn4","btn5","btn6","btn7","btn8","btn9"];
-  
-  
-}
-function start2(){
-  for(btn2 of twobtn)
-  btn2.addEventListener("click", start);
 
-}
+
+
 let arr=["btn1","btn2","btn3","btn4","btn5","btn6","btn7","btn8","btn9"];
 function computer(){
  audioturn.play();
