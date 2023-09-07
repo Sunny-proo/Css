@@ -2,6 +2,7 @@ let wonsound=new Audio("won.txt");
   let audioturn=new Audio("click.txt")
 let allbtns=document.querySelectorAll(".inner");
 let turn="X";
+let twobtn=document.querySelectorAll(".inn");
 function changeturn(){
   if(turn=="X"){
     return turn="0";
@@ -31,12 +32,14 @@ function start(){
 let twobtn=document.querySelectorAll(".inn");
 for(btn2 of twobtn){
   btn2.addEventListener("click", start);
+  btn2.disabled=true;
 }
 
 
 function btnpress(){
   audioturn.play();
   let btn=this;
+  btn.disabled=true;
   let dr=btn.getAttribute("id");
   a=`#${dr}`;
   let sc=document.querySelector(a);
@@ -48,6 +51,10 @@ function btnpress(){
 let rest=document.querySelector("#reset");
 rest.addEventListener("click", reset);
 function reset(){
+  for(btn of allbtns){
+    btn.disabled=false;}
+ for(bnt of twobtn){
+   bnt.disabled=false;}
   turn="X";
   let line=document.querySelector(".line");
 try{
@@ -70,7 +77,7 @@ catch(err){
   
 }
 function start2(){
-  for(btn2 of twobtn){
+  for(btn2 of twobtn)
   btn2.addEventListener("click", start);
 }
 }
