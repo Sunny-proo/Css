@@ -41,7 +41,8 @@ img{
   height:70px;
   border: solid black;
   text-align: center;
-  font-size: 4.5rem
+  font-size: 4.5rem;
+  color:black;
 }
 #btn1{
   border-top:none;
