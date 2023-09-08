@@ -3,6 +3,7 @@
 let allbtns=document.querySelectorAll(".inner");
 let lossound=new Audio("loss.txt");
 let turn="X";
+alert("hi")
 function changeturn(){
   if(turn=="X"){
     return turn="0";
@@ -38,6 +39,7 @@ for(btn2 of twobtn){
 function btnpress(){
   audioturn.play();
   let btn=this;
+ btn.disabled=true;
   let dr=btn.getAttribute("id");
   a=`#${dr}`;
   let sc=document.querySelector(a);
@@ -61,6 +63,7 @@ function computer(){
 
   let sc=document.querySelector(a);
   sc.innerText="X"
+ sc.disabled=true;
   changeturn();
   win()
   //for(buttn of allbtns){
@@ -71,6 +74,7 @@ function computer(){
 function btn2press(){
   audioturn.play();
   let btn=this;
+ btn.disabled=true;
   let dr=btn.getAttribute("id");
   a=`#${dr}`;
   let sc=document.querySelector(a);
@@ -158,7 +162,11 @@ function checkwin(){
     clss="l8"
   return clss;
   }
-  
+  if(clss!==""){
+   for(btn of allbtns){
+    btn.disabled=true;
+   }
+  }
   
 }
 cat=1;
@@ -313,6 +321,9 @@ function check2win(){
 function win(){
 try{
   check2win();
+ for(btn of allbtns){
+  btn.disabled=true;
+ }
 }
 catch{
   if(turn=="0" && cat==1){
